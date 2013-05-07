@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/datos_de_entrada" 
+        android:id="@+id/texto"/>
+    <EditText 
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_in"
+        android:layout_below="@id/texto"
+        android:inputType="number"
+        />
+    
+    <TextView
+        android:id="@+id/texto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_in"
+        android:text="@string/selecciona_el_tipo_de_conversi_n"
+        />
+    
+   <RadioGroup android:id="@+id/rgTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/texto2">
+    
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/celsius" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"        
+        android:text="@string/fahrenheit" />
+    
+    </RadioGroup>
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_below="@id/rgTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_" />
+
+   <EditText
+        android:id="@+id/editText2"
+        android:layout_below="@id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10" />
+   <Button
+       android:id="@+id/boton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/editText2"
+       android:text="@string/start_web_service_2"
+       ></Button>
+   <Button
+       android:id="@+id/JSONButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/boton"
+       android:text="@string/json_test"
+       ></Button>
+    
+
+</RelativeLayout>
